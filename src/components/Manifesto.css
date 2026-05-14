@@ -1,0 +1,32 @@
+.manifesto {
+  padding: 15rem 0;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.manifesto .container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.manifesto-heading {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+  margin: 0;
+}
+
+.manifesto-text {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-soft);
+  margin: 0;
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,228 @@
+.features {
+  padding: 8rem 0;
+  background-color: var(--bg);
+}
+
+.features .container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-bauhaus {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  position: relative;
+  width: 100%;
+}
+
+.bauhaus-feature-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4rem;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+
+.bauhaus-shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+/* Specific Card Layouts & Shapes */
+
+/* Card 1: Left aligned, large orange circle behind it */
+.card-1 {
+  justify-content: flex-start;
+  border-left: 8px solid var(--accent);
+}
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  left: -100px;
+  top: -50px;
+}
+
+/* Card 2: Right aligned, massive arch intersecting */
+.card-2 {
+  justify-content: flex-end;
+  text-align: right;
+  border-right: 8px solid var(--primary);
+}
+.card-2 .card-content {
+  align-items: flex-end;
+}
+.shape-2 {
+  width: 500px;
+  height: 250px;
+  background-color: var(--primary);
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  right: -50px;
+  bottom: -50px;
+  transform: rotate(-15deg);
+}
+
+/* Card 3: Center aligned, huge typography, sharp triangle */
+.card-3 {
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 0;
+}
+.card-3 .card-content {
+  align-items: center;
+  max-width: 800px;
+}
+.card-3 .feature-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+.shape-3 {
+  width: 0;
+  height: 0;
+  border-top: 300px solid transparent;
+  border-left: 300px solid var(--accent);
+  border-bottom: 300px solid transparent;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Card 4: Full width border box */
+.card-4 {
+  justify-content: flex-start;
+  border: 4px solid var(--primary);
+  background-color: var(--surface);
+  padding: 6rem;
+  margin-top: 4rem;
+}
+.shape-4 {
+  width: 100%;
+  height: 20px;
+  background-color: var(--accent);
+  bottom: -20px;
+  left: 0;
+  opacity: 1; /* Solid accent anchor */
+}
+
+.feature-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.feature-desc {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--text-soft);
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+.features-callout {
+  text-align: center;
+  background: transparent;
+  color: var(--primary);
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.callout-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin: 0;
+  line-height: 0.95;
+}
+
+.callout-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.callout-stats span {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
+}
+
+.features-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+
+.features-footer p {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .features-bauhaus {
+    gap: 4rem;
+  }
+  .bauhaus-feature-card {
+    padding: 2rem 1rem;
+    border-width: 4px !important;
+  }
+  .card-3 {
+    padding: 4rem 0;
+  }
+  .card-4 {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .shape-1 {
+    width: 200px;
+    height: 200px;
+    left: -50px;
+  }
+  .shape-2 {
+    width: 300px;
+    height: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+  }
+  .shape-3 {
+    border-top-width: 150px;
+    border-left-width: 150px;
+    border-bottom-width: 150px;
+    left: -10%;
+  }
+  .callout-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
